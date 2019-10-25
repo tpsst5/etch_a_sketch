@@ -26,7 +26,7 @@ function createGrid(gridSize){
     for(let i = 0; i < gridSize * gridSize; i++){
         box = document.createElement('div');
         box.style.border = '1px solid black';
-        box.style.backgroundColor = '#7f99b1';
+        box.style.backgroundColor = '#003366';
         squares.push(box);
         containerDiv.appendChild(box);
     }
@@ -44,7 +44,7 @@ function changeColor(){
             e.target.style.backgroundColor = '#ff6700';
         }
         function revertColor(e){
-            e.target.style.backgroundColor = '#7f99b1';
+            e.target.style.backgroundColor = '#003366';
         }
     }
 }
@@ -61,7 +61,7 @@ function getRandomColor(){
 function changeColorRandom(){
         removeBoxes();
         for(let i = 0; i < squares.length; i++){
-            squares[i].style.backgroundColor = '#7f99b1';
+            squares[i].style.backgroundColor = '#003366';
         }
         gridSize = prompt('How many squares per side?');
         createGrid(gridSize);
@@ -72,7 +72,7 @@ function changeColorRandom(){
             e.target.style.backgroundColor = getRandomColor();
         }
         function revertColor(e){
-            e.target.style.backgroundColor = '#7f99b1';
+            e.target.style.backgroundColor = '#003366';
         }
     }
 }
@@ -94,7 +94,7 @@ randColorBtn.addEventListener('click', changeColorRandom);
 function clearBox(){
     removeBoxes();
     for(let i = 0; i < squares.length; i++){
-        squares[i].style.backgroundColor = '#7f99b1';
+        squares[i].style.backgroundColor = '#003366';
     }
     gridSize = prompt('How many squares per side?');
     createGrid(gridSize);
