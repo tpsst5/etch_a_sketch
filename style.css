@@ -3,3 +3,37 @@ html, body{
     padding: 0;
     background-color: rgb(165, 206, 200);
 }
+
+.clrBtn{
+    background-color: #f0f4f7;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+    border: 2px solid rgb(18, 61, 75);
+    border-radius: 10px;
+    margin: 12px 20px;
+}
+
+.clrBtn:hover{
+    background-image: -webkit-linear-gradient(top, #fff, #0c53ec);
+    font-weight: bold;
+}
+
+.randBtn{
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fafafa;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
+    border: 2px solid rgb(18, 61, 75);
+    border-radius: 10px;
+}
+
+.randBtn:hover{
+    background-image: -webkit-linear-gradient(top, #fff, #0c53ec);
+    font-weight: bold;
+}

@@ -7,7 +7,7 @@ containerDiv.style.borderRadius = '5px';
 containerDiv.style.display = 'grid';
 containerDiv.style.gridTemplateColumns = 'repeat(16, 1fr)';
 containerDiv.style.gridTemplateRows = 'repeat(16, 1fr)';
-containerDiv.style.marginTop = '5%';
+containerDiv.style.margin = '5%';
 containerDiv.style.height = '85%'; 
 containerDiv.style.width = '90%';
 containerDiv.style.justifyContent = 'center';
@@ -82,12 +82,14 @@ changeColor();
 
 // Create clear button
 let clearBtn = document.createElement('button');
-clearBtn.appendChild(document.createTextNode('Clear'));
+clearBtn.appendChild(document.createTextNode('CLEAR'));
+clearBtn.className = 'clrBtn';
 clearBtn.addEventListener('click', clearBox);
 
 // Create random color button
 let randColorBtn = document.createElement('button');
-randColorBtn.appendChild(document.createTextNode('Random Color'));
+randColorBtn.appendChild(document.createTextNode('RANDOM COLOR'));
+randColorBtn.className = 'randBtn';
 randColorBtn.addEventListener('click', changeColorRandom);
 
 // Clear squares and gets variable for new number of squares per side
