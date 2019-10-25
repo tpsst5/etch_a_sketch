@@ -1,5 +1,5 @@
 // Create grid container
-let containerDiv = document.createElement('div');
+const containerDiv = document.createElement('div');
 containerDiv.className = 'container';
 containerDiv.style.margin = '0px auto 0';
 containerDiv.style.border = '5px solid black';
@@ -31,9 +31,7 @@ function createGrid(gridSize){
         containerDiv.appendChild(box);
     }
 }
-
-// Create standard 16 x 16 grid on start up
-createGrid(gridSize);
+window.onload = createGrid(gridSize);
 
 // Change color of box on mouseover
 function changeColor(){
@@ -76,9 +74,7 @@ function changeColorRandom(){
         }
     }
 }
-
-// Run changeColor on start up
-changeColor();
+window.onload = changeColor();
 
 // Create clear button
 let clearBtn = document.createElement('button');
