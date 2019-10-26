@@ -7,7 +7,7 @@ containerDiv.style.borderRadius = '5px';
 containerDiv.style.display = 'grid';
 containerDiv.style.gridTemplateColumns = 'repeat(16, 1fr)';
 containerDiv.style.gridTemplateRows = 'repeat(16, 1fr)';
-containerDiv.style.margin = '5%';
+containerDiv.style.margin = '2% 5% 5% 5%';
 containerDiv.style.height = '85%'; 
 containerDiv.style.width = '90%';
 containerDiv.style.justifyContent = 'center';
@@ -62,6 +62,13 @@ function changeColorRandom(){
             squares[i].style.backgroundColor = '#003366';
         }
         gridSize = prompt('How many squares per side?');
+        if (isNaN(gridSize)){
+            alert('Invalid entry. Please enter a number.');
+            location.reload();
+        } else if (gridSize < 1){
+            alert('Invalid entry. Please enter a positive number.');
+            location.reload();
+        }
         createGrid(gridSize);
         for(let i = 0; i < squares.length; i++){
             squares[i].addEventListener('mouseover', changeColor);
@@ -95,6 +102,13 @@ function clearBox(){
         squares[i].style.backgroundColor = '#003366';
     }
     gridSize = prompt('How many squares per side?');
+    if (isNaN(gridSize)){
+        alert('Invalid entry. Please enter a number.');
+        location.reload();
+    } else if (gridSize < 1){
+        alert('Invalid entry. Please enter a positive number.');
+        location.reload();
+    }
     createGrid(gridSize);
     changeColor();
 }
@@ -105,7 +119,12 @@ function removeBoxes(){
     }
 }
 
+let header = document.createElement('h1');
+header.appendChild(document.createTextNode('ETCH-A-SKETCH'));
+header.className = 'h1';
+
 // Insert elements into HTML
+document.body.appendChild(header);
 document.body.appendChild(clearBtn);
 document.body.appendChild(randColorBtn);
 document.body.appendChild(containerDiv);
